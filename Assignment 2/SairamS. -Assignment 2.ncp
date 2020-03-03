@@ -1,0 +1,335 @@
+<Project>
+  <Name>Assignment 2- </Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Assignment2</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Interface">
+        <Name>ContainerInterface</Name>
+        <Access>Public</Access>
+        <Location left="56" top="277" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public boolean loadContainer(DonationPackage dPackage)</Member>
+        <Member type="Method">DonationPackage removePackageFromContainer()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>ContainerTest</Name>
+        <Access>Public</Access>
+        <Location left="30" top="514" />
+        <Size width="162" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">DonationPackage dpk1</Member>
+        <Member type="Field">DonationPackage dpk2</Member>
+        <Member type="Field">DonationPackage dpk3</Member>
+        <Member type="Field">DonationPackage dpk4</Member>
+        <Member type="Field">DonationPackage dpk5</Member>
+        <Member type="Field">DonationPackage dpk6</Member>
+        <Member type="Field">Container aContainer</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testLoadContainer()</Member>
+        <Member type="Method">public void testToArrayPackage()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>DonationManageInterface</Name>
+        <Access>Public</Access>
+        <Location left="254" top="277" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public boolean managerLoadContainer(DonationPackage dPackage)</Member>
+        <Member type="Method">public Recipient[] managerArrayRecipient()</Member>
+        <Member type="Method">boolean managerQueueVolunteer(Volunteer v)</Member>
+        <Member type="Method">boolean managerQueueRecipient(Recipient r)</Member>
+        <Member type="Method">int donatePackage()</Member>
+        <Member type="Method">DonationPackage[] managerArrayPackage()</Member>
+        <Member type="Method">public Volunteer[] managerArrayVolunteer()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>DonationManagerSTUDENTTest</Name>
+        <Access>Public</Access>
+        <Location left="216" top="529" />
+        <Size width="249" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">DonationManager manager</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testManagerLoadcontainer()</Member>
+        <Member type="Method">public void testManagerQueueVolunteer()</Member>
+        <Member type="Method">public void testManagerQueueRecipient()</Member>
+        <Member type="Method">public void testDonatePackage()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DonationMgmGui</Name>
+        <Access>Public</Access>
+        <Location left="254" top="765" />
+        <Size width="162" height="434" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Button stackPackageBtn</Member>
+        <Member type="Field">private Button volunteerBtn</Member>
+        <Member type="Field">private Button recBtn</Member>
+        <Member type="Field">private Button donateBtn</Member>
+        <Member type="Field">private Button exitBtn</Member>
+        <Member type="Field">private TextField[] recipients</Member>
+        <Member type="Field">private final int CAPACITY</Member>
+        <Member type="Field">private TextField[] volunteers</Member>
+        <Member type="Field">private TextField[] packages</Member>
+        <Member type="Field">private TextArea messageArea</Member>
+        <Member type="Method">public GridPane createButtonPane()</Member>
+        <Member type="Method">public TitledPane createRecipientsPane()</Member>
+        <Member type="Method">public TitledPane createVolunteersPane()</Member>
+        <Member type="Method">public TitledPane createPackagesPane()</Member>
+        <Member type="Method">public void newPackage()</Member>
+        <Member type="Method">public void newVolunteer()</Member>
+        <Member type="Method">public static void main(String[] args)</Member>
+        <Member type="Method">public void donate()</Member>
+        <Member type="Method">public void start(Stage stage)</Member>
+        <Member type="Method">public void newRecipient()</Member>
+        <Member type="Method">public void updateScreen()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>QueueInterface</Name>
+        <Access>Public</Access>
+        <Location left="482" top="302" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public boolean isEmpty()</Member>
+        <Member type="Method">public boolean isFull()</Member>
+        <Member type="Method">public T dequeue()</Member>
+        <Member type="Method">public int size()</Member>
+        <Member type="Method">public boolean enqueue(T e)</Member>
+        <Member type="Method">public T[] toArray()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipientLine_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="668" top="824" />
+        <Size width="202" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">RecipientLine aRecipientLine</Member>
+        <Member type="Field">Recipient r1</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddNewRecipient()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>RecipientLineInterface</Name>
+        <Access>Public</Access>
+        <Location left="668" top="258" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public boolean addNewRecipient(Recipient rc)</Member>
+        <Member type="Method">void newMethod()</Member>
+        <Member type="Method">public boolean recipientLineEmpty()</Member>
+        <Member type="Method">public Recipient[] toArrayRecipient()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipientLineTest</Name>
+        <Access>Public</Access>
+        <Location left="668" top="494" />
+        <Size width="162" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">RecipientLine aRecipientLine</Member>
+        <Member type="Field">Recipient r1</Member>
+        <Member type="Field">Recipient r2</Member>
+        <Member type="Field">Recipient r3</Member>
+        <Member type="Field">Recipient r4</Member>
+        <Member type="Field">Recipient r5</Member>
+        <Member type="Field">Recipient r6</Member>
+        <Member type="Field">Recipient temp</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddNewRecepient()</Member>
+        <Member type="Method">public void tesRecipientTurn()</Member>
+        <Member type="Method">public void testToArrayRecipient()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>StackInterface</Name>
+        <Access>Public</Access>
+        <Location left="436" top="27" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public boolean isEmpty()</Member>
+        <Member type="Method">public boolean isFull()</Member>
+        <Member type="Method">public T pop()</Member>
+        <Member type="Method">public int size()</Member>
+        <Member type="Method">public boolean push(T e)</Member>
+        <Member type="Method">public T[] toArray()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>VolunteerLine_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="877" top="540" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">VolunteerLine aVolunteerLine</Member>
+        <Member type="Field">Volunteer v1</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddNewVolunteer()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>VolunteerLineInterface</Name>
+        <Access>Public</Access>
+        <Location left="877" top="302" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public boolean addNewVolunteer(Volunteer v)</Member>
+        <Member type="Method">public boolean volunteerLineEmpty()</Member>
+        <Member type="Method">public Volunteer[] toArrayVolunteer()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>Container</Name>
+        <Access>Public</Access>
+        <Location left="56" top="38" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int size</Member>
+        <Member type="Constructor">public Container(int size)</Member>
+        <Member type="Constructor">public Container()</Member>
+        <Member type="Method">public boolean loadContainer(DonationPackage dpk1)</Member>
+        <Member type="Method">public DonationPackage removePackageFromContainer()</Member>
+        <Member type="Method">public Object[] toArrayPackage()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DonationManager</Name>
+        <Access>Public</Access>
+        <Location left="254" top="27" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void managerLoadContainer(DonationPackage newPackage)</Member>
+        <Member type="Method">public Object[] managerArrayPackage()</Member>
+        <Member type="Method">public void managerQueueVolunteer(Volunteer newVolunteer)</Member>
+        <Member type="Method">public Object[] managerArrayVolunteer()</Member>
+        <Member type="Method">public void managerQueueRecipient(Recipient newRec)</Member>
+        <Member type="Method">public Object[] managerArrayRecipient()</Member>
+        <Member type="Method">public void donatePackage()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DonationPackage</Name>
+        <Access>Public</Access>
+        <Location left="482" top="778" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public DonationPackage(String string, int i)</Member>
+        <Member type="Constructor">public DonationPackage(String pDesc, double pWeight)</Member>
+        <Member type="Method">public Object getDescription()</Member>
+        <Member type="Method">public boolean isHeavy()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Recipient</Name>
+        <Access>Public</Access>
+        <Location left="482" top="540" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Recipient(String string)</Member>
+        <Member type="Method">public Object getName()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipientLine</Name>
+        <Access>Public</Access>
+        <Location left="656" top="10" />
+        <Size width="191" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public RecipientLine(int i)</Member>
+        <Member type="Method">public boolean addNewRecipient(Recipient r1)</Member>
+        <Member type="Method">public Recipient recipientTurn()</Member>
+        <Member type="Method">public Object[] toArrayRecipient()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>VolunteerLine</Name>
+        <Access>Public</Access>
+        <Location left="877" top="68" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public VolunteerLine(int i)</Member>
+        <Member type="Method">public boolean addNewVolunteer(Volunteer v1)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ContainerException</Name>
+        <Access>Public</Access>
+        <Location left="1300" top="302" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public ContainerException(String message)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RecipientException</Name>
+        <Access>Public</Access>
+        <Location left="1104" top="302" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public RecipientException(String message)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>VolunteerException</Name>
+        <Access>Public</Access>
+        <Location left="1506" top="302" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public VolunteerException(String message)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Exception</Name>
+        <Access>Public</Access>
+        <Location left="1300" top="25" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DonationManagerTest</Name>
+        <Access>Public</Access>
+        <Location left="254" top="1245" />
+        <Size width="211" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">DonationManager manager</Member>
+        <Member type="Field">Recipient r1</Member>
+        <Member type="Field">DonationPackage d1</Member>
+        <Member type="Field">DonationPackage d2</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testManagerLoadcontainer()</Member>
+        <Member type="Method">public void testManagerQueueVolunteer()</Member>
+        <Member type="Method">public void testManagerQueueRecipientSTUDENT()</Member>
+        <Member type="Method">public void testDonatePackage()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="21" second="19">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="21" second="18">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="21" second="20">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
