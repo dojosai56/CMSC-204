@@ -1,0 +1,195 @@
+<Project>
+  <Name>Assignment 3</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Assignment3</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>BasicDoubleLinkedList_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="1092" top="526" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">BasicDoubleLinkedList&lt;String&gt; linkedString</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testGetSize()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BasicDoubleLinkedListTest</Name>
+        <Access>Public</Access>
+        <Location left="624" top="508" />
+        <Size width="162" height="468" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">BasicDoubleLinkedList&lt;String&gt; linkedString</Member>
+        <Member type="Field">BasicDoubleLinkedList&lt;Double&gt; linkedDouble</Member>
+        <Member type="Field">BasicDoubleLinkedList&lt;Car&gt; linkedCar</Member>
+        <Member type="Field">StringComparator comparator</Member>
+        <Member type="Field">DoubleComparator comparatorD</Member>
+        <Member type="Field">CarComparator comparatorCar</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testGetSize()</Member>
+        <Member type="Method">public void testAddToEnd()</Member>
+        <Member type="Method">public void testAddToFront()</Member>
+        <Member type="Method">public void testGetFirst()</Member>
+        <Member type="Method">public void testGetLast()</Member>
+        <Member type="Method">public void testToArrayList()</Member>
+        <Member type="Method">public void testIteratorSuccessfulNext()</Member>
+        <Member type="Method">public void testIteratorSuccessfulPrevious()</Member>
+        <Member type="Method">public void testIteratorNoSuchElementExceptionNext()</Member>
+        <Member type="Method">public void testIteratorUnsupportedOperationException()</Member>
+        <Member type="Method">public void testRemove()</Member>
+        <Member type="Method">public void testRetrieveFirstElement()</Member>
+        <Member type="Method">public void testRetrieveLastElement()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BasicDoubleLinkedList</Name>
+        <Access>Public</Access>
+        <Location left="895" top="526" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void addToFront(T newElement)</Member>
+        <Member type="Method">public void addToEnd(T newElement)</Member>
+        <Member type="Method">public ArrayList&lt;T&gt; toArrayList()</Member>
+        <Member type="Method">public T retrieveFirstElement()</Member>
+        <Member type="Method">public T retrieveLastElement()</Member>
+        <Member type="Method">public T getLast()</Member>
+        <Member type="Method">public T getFirst()</Member>
+        <Member type="Method">public void remove(T targetData, java.util.Comparator&lt;T&gt; comparator)</Member>
+        <Member type="Method">public ListIterator&lt;T&gt; iterator()</Member>
+        <Member type="Method">public int getSize()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SortedDoubleLinkedList</Name>
+        <Access>Public</Access>
+        <Location left="10" top="508" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public SortedDoubleLinkedList(StringComparator comparator)</Member>
+        <Member type="Method">BasicDoubleLinkedList&lt;T&gt; addToEnd(T data)</Member>
+        <Member type="Method">BasicDoubleLinkedList&lt;T&gt; addToFront(T data)</Member>
+        <Member type="Method">java.util.ListIterator&lt;T&gt; iterator()</Member>
+        <Member type="Method">SortedDoubleLinkedList&lt;T&gt; remove(T data, java.util.Comparator&lt;T&gt; comparator)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DoubleLinkedListDriver</Name>
+        <Access>Public</Access>
+        <Location left="208" top="527" />
+        <Size width="162" height="910" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private TextField newElementField</Member>
+        <Member type="Field">private TextField retrievedElementField</Member>
+        <Member type="Field">private TextField getElementField</Member>
+        <Member type="Field">private TextField removeField</Member>
+        <Member type="Field">private TextField iteratorField</Member>
+        <Member type="Field">private String newElement</Member>
+        <Member type="Field">private Label newElementLabel</Member>
+        <Member type="Field">private Label retrievedElementLabel</Member>
+        <Member type="Field">private Label getElementLabel</Member>
+        <Member type="Field">private Label removeLabel</Member>
+        <Member type="Field">private Label basicLabel</Member>
+        <Member type="Field">private Label sortedLabel</Member>
+        <Member type="Field">private Label iteratorLabel</Member>
+        <Member type="Field">private RadioButton basicDLL</Member>
+        <Member type="Field">private RadioButton sortedDLL</Member>
+        <Member type="Field">private ToggleGroup myToggleGroup</Member>
+        <Member type="Field">private int basicIterCount</Member>
+        <Member type="Field">private int sortedIterCount</Member>
+        <Member type="Field">private Button exitBtn</Member>
+        <Member type="Field">private Button addFront</Member>
+        <Member type="Field">private Button addEnd</Member>
+        <Member type="Field">private Button add</Member>
+        <Member type="Field">private Button retrieveFirst</Member>
+        <Member type="Field">private Button retrieveLast</Member>
+        <Member type="Field">private Button getFirst</Member>
+        <Member type="Field">private Button getLast</Member>
+        <Member type="Field">private Button remove</Member>
+        <Member type="Field">private Button startIterator</Member>
+        <Member type="Field">private Button next</Member>
+        <Member type="Field">private Button prev</Member>
+        <Member type="Field">private Button hasNext</Member>
+        <Member type="Field">private Button hasPrev</Member>
+        <Member type="Field">private Alert alert = new Alert(AlertType.INFORMATION)</Member>
+        <Member type="Field">private Alert alertUser = new Alert(AlertType.INFORMATION)</Member>
+        <Member type="Field">private BasicDoubleLinkedList&lt;String&gt; basic</Member>
+        <Member type="Field">private SortedDoubleLinkedList&lt;String&gt; sorted</Member>
+        <Member type="Field">private StringComparator sComp</Member>
+        <Member type="Field">private TextArea basicArea</Member>
+        <Member type="Field">private TextArea sortedArea</Member>
+        <Member type="Field">private TextArea basicIterArea</Member>
+        <Member type="Field">private TextArea sortedIterArea</Member>
+        <Member type="Field">private ListIterator&lt;String&gt; basicIter</Member>
+        <Member type="Field">private ListIterator&lt;String&gt; sortedIter</Member>
+        <Member type="Method">public void start(Stage stage)</Member>
+        <Member type="Method">public static void main(String[] args)</Member>
+        <Member type="Method">private void showLists(String type, ArrayList&lt;String&gt; list)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SortedDoubleLinkedListTest</Name>
+        <Access>Public</Access>
+        <Location left="422" top="453" />
+        <Size width="162" height="468" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">SortedDoubleLinkedList&lt;String&gt; sortedLinkedString</Member>
+        <Member type="Field">SortedDoubleLinkedList&lt;Double&gt; sortedLinkedDouble</Member>
+        <Member type="Field">SortedDoubleLinkedList&lt;Car&gt; sortedLinkedCar</Member>
+        <Member type="Field">StringComparator comparator</Member>
+        <Member type="Field">DoubleComparator comparatorD</Member>
+        <Member type="Field">CarComparator comparatorCar</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddToEnd()</Member>
+        <Member type="Method">public void testAddToFront()</Member>
+        <Member type="Method">public void testIteratorSuccessfulNext()</Member>
+        <Member type="Method">public void testIteratorSuccessfulStringPrevious()</Member>
+        <Member type="Method">public void testIteratorSuccessfulCarPrevious()</Member>
+        <Member type="Method">public void testIteratorSuccessfulDoubleNext()</Member>
+        <Member type="Method">public void testIteratorSuccessfulDoublePrevious()</Member>
+        <Member type="Method">public void testIteratorNoSuchElementException()</Member>
+        <Member type="Method">public void testIteratorUnsupportedOperationExceptionString()</Member>
+        <Member type="Method">public void testAddCar()</Member>
+        <Member type="Method">public void testRemoveFirstCar()</Member>
+        <Member type="Method">public void testRemoveEndCar()</Member>
+        <Member type="Method">public void testRemoveMiddleCar()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SortedDoubleLinkedList_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="370" top="964" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">SortedDoubleLinkedList&lt;String&gt; sortedLinkedString</Member>
+        <Member type="Field">StringComparator comparator = new StringComparator()</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddToEnd()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Application</Name>
+        <Access>Public</Access>
+        <Location left="208" top="44" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="7" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
