@@ -1,0 +1,238 @@
+<Project>
+  <Name>Assignment 4</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Concordance</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Application</Name>
+        <Access>Public</Access>
+        <Location left="12" top="20" />
+        <Size width="162" height="95" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceGui</Name>
+        <Access>Public</Access>
+        <Location left="12" top="182" />
+        <Size width="162" height="383" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static final long serialVersionUID</Member>
+        <Member type="Field">private TextArea conTextArea</Member>
+        <Member type="Field">private Button inputButton</Member>
+        <Member type="Field">private Button outputButton</Member>
+        <Member type="Field">private Button exitButton</Member>
+        <Member type="Field">private Button conButton</Member>
+        <Member type="Field">private Button clearButton</Member>
+        <Member type="Field">private TitledPane textTitlePane</Member>
+        <Member type="Field">private File inputFile</Member>
+        <Member type="Field">private File outputFile</Member>
+        <Member type="Field">private RadioButton conFile</Member>
+        <Member type="Field">private RadioButton conArray</Member>
+        <Member type="Field">private ConcordanceDataManager concordance</Member>
+        <Member type="Field">private VBox mainPane</Member>
+        <Member type="Method">private void createRadioButtons()</Member>
+        <Member type="Method">private void createTextArea()</Member>
+        <Member type="Method">private void createButtons()</Member>
+        <Member type="Method">public void newMethod()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceDataManager_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="981" top="20" />
+        <Size width="323" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private ConcordanceDataManagerInterface concordanceManager</Member>
+        <Member type="Field">private File inputFile</Member>
+        <Member type="Field">private File outputFile</Member>
+        <Member type="Field">private String text</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testCreateConcordanceArray()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceDataStructure_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="1331" top="20" />
+        <Size width="289" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">ConcordanceDataStructureInterface testStructure</Member>
+        <Member type="Field">String text</Member>
+        <Member type="Field">ArrayList&lt;String&gt; array</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testGetTableSize()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceDataManagerTest</Name>
+        <Access>Public</Access>
+        <Location left="2032" top="20" />
+        <Size width="313" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private ConcordanceDataManagerInterface concordanceManager</Member>
+        <Member type="Field">private File inputFile</Member>
+        <Member type="Field">private File outputFile</Member>
+        <Member type="Field">private String text</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testCreateConcordanceArray()</Member>
+        <Member type="Method">public void testCreateConcordanceFileA()</Member>
+        <Member type="Method">public void testCreateConcordanceFileB()</Member>
+        <Member type="Method">public void testCreateConcordanceFileC()</Member>
+        <Member type="Method">public void testCreateConcordanceFileD()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceDataStructureTest</Name>
+        <Access>Public</Access>
+        <Location left="1646" top="20" />
+        <Size width="352" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">ConcordanceDataStructureInterface concordanceDataStructure</Member>
+        <Member type="Field">ConcordanceDataStructureInterface testStructure</Member>
+        <Member type="Field">String text</Member>
+        <Member type="Field">ArrayList&lt;String&gt; array</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddA()</Member>
+        <Member type="Method">public void testAddB()</Member>
+        <Member type="Method">public void testAddC()</Member>
+        <Member type="Method">public void testGetTableSize()</Member>
+        <Member type="Method">public void testShowAll()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>ConcordanceDataManagerInterface</Name>
+        <Access>Public</Access>
+        <Location left="221" top="20" />
+        <Size width="289" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public ArrayList&lt;String&gt; createConcordanceArray(String input)</Member>
+        <Member type="Method">void newMethod()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceDataManager</Name>
+        <Access>Public</Access>
+        <Location left="221" top="294" />
+        <Size width="322" height="400" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String input</Member>
+        <Member type="Field">private File input</Member>
+        <Member type="Field">File output</Member>
+        <Member type="Field">private int length</Member>
+        <Member type="Field">private static ConcordanceDataStructure hashingobject</Member>
+        <Member type="Field">ConcordanceDataStructure element = new ConcordanceDataStructure(length)</Member>
+        <Member type="Field">int size = element.getTableSize()</Member>
+        <Member type="Field">int linenumber</Member>
+        <Member type="Field">String bar</Member>
+        <Member type="Field">String[] term</Member>
+        <Member type="Field">Scanner scanner</Member>
+        <Member type="Field">String line</Member>
+        <Member type="Field">int lineNumber</Member>
+        <Member type="Field">String[] tokens</Member>
+        <Member type="Field">int wordsInText</Member>
+        <Member type="Constructor">public ConcordanceDataManager()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; createConcordanceArray(String input)</Member>
+        <Member type="Method">public boolean createConcordanceFile(File input, File output)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>ConcordanceDataStructureInterface</Name>
+        <Access>Public</Access>
+        <Location left="797" top="20" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public int getTableSize()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; getWords(int index)</Member>
+        <Member type="Method">public ArrayList&lt;LinkedList&lt;Integer&gt;&gt; getPageNumbers(int index)</Member>
+        <Member type="Method">public void add(String word, int lineNum)</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; showAll()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceDataStructure</Name>
+        <Access>Public</Access>
+        <Location left="797" top="334" />
+        <Size width="162" height="451" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int number</Member>
+        <Member type="Field">private int counter</Member>
+        <Member type="Field">private int size</Member>
+        <Member type="Field">private int myNode</Member>
+        <Member type="Field">private int numberPrime</Member>
+        <Member type="Field">private String test</Member>
+        <Member type="Field">private LinkedList[] events</Member>
+        <Member type="Field">private double factor</Member>
+        <Member type="Field">int quotient</Member>
+        <Member type="Field">int k</Member>
+        <Member type="Field">int num</Member>
+        <Member type="Field">ArrayList&lt;String&gt; arraylist = new ArrayList&lt;String&gt;()</Member>
+        <Member type="Field">ArrayList&lt;ConcordanceDataElement&gt; dataelements = new ArrayList&lt;ConcordanceDataElement&gt;()</Member>
+        <Member type="Field">ArrayList&lt;String&gt; wordlist = new ArrayList&lt;String&gt;()</Member>
+        <Member type="Field">ArrayList&lt;LinkedList&lt;Integer&gt;&gt; numberofPages = new ArrayList&lt;LinkedList&lt;Integer&gt;&gt;()</Member>
+        <Member type="Constructor">public ConcordanceDataStructure(int number)</Member>
+        <Member type="Constructor">public ConcordanceDataStructure(String test, int size)</Member>
+        <Member type="Method">public int getTableSize()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; getWords(int index)</Member>
+        <Member type="Method">public ArrayList&lt;LinkedList&lt;Integer&gt;&gt; getPageNumbers(int index)</Member>
+        <Member type="Method">public void add(String word, int lineNum)</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; showAll()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>Comparable</Name>
+        <Access>Public</Access>
+        <Location left="611" top="20" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>ConcordanceDataElement</Name>
+        <Access>Public</Access>
+        <Location left="611" top="347" />
+        <Size width="162" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private LinkedList&lt;Integer&gt; pgNumberlist = new LinkedList&lt;&gt;()</Member>
+        <Member type="Field">ListIterator&lt;Integer&gt; pgNumberlistIterator = pgNumberlist.listIterator()</Member>
+        <Member type="Field">private int lineNumber</Member>
+        <Member type="Field">ConcordanceDataElement arg0</Member>
+        <Member type="Field">String space</Member>
+        <Member type="Field">String comma</Member>
+        <Member type="Constructor">public ConcordanceDataElement(java.lang.String word)</Member>
+        <Member type="Method">public void addPage(int lineNum)</Member>
+        <Member type="Method">public int compareTo(ConcordanceDataElement arg0)</Member>
+        <Member type="Method">public java.util.LinkedList&lt;java.lang.Integer&gt; getList()</Member>
+        <Member type="Method">public String getWord()</Member>
+        <Member type="Method">public int hashCode()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="6" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="8" second="9">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="10" second="11">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
