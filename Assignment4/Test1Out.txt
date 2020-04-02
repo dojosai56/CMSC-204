@@ -1,0 +1,15 @@
+  3
+all: 3
+answer: 1
+crazy: 2
+daisy: 0
+do: 1
+for: 3
+give: 1
+half: 2
+i'm: 2
+love: 3
+me: 1
+of: 3
+you: 3
+your: 1
