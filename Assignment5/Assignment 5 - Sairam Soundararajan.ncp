@@ -1,0 +1,195 @@
+<Project>
+  <Name>Assignment 5 - Sairam Soundararajan</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>MorseCode Project</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Interface">
+        <Name>LinkedConverterTreeInterface</Name>
+        <Access>Public</Access>
+        <Location left="22" top="19" />
+        <Size width="162" height="400" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">TreeNode&lt;String&gt; root</Member>
+        <Member type="Field">String code</Member>
+        <Member type="Field">String letter</Member>
+        <Member type="Field">String data</Member>
+        <Member type="Field">String result</Member>
+        <Member type="Field">ArrayList&lt;String&gt; list</Member>
+        <Member type="Field">TreeNode&lt;String&gt; newNode</Member>
+        <Member type="Method">public void addNode(TreeNode&lt;String&gt; root, String code, String letter)</Member>
+        <Member type="Method">public void buildTree()</Member>
+        <Member type="Method">public MorseCodeTree&lt;String&gt; delete(String data)</Member>
+        <Member type="Method">public String fetch(String code)</Member>
+        <Member type="Method">public String fetchNode(TreeNode&lt;String&gt; root, String code)</Member>
+        <Member type="Method">public TreeNode&lt;String&gt; getRoot()</Member>
+        <Member type="Method">public MorseCodeTree&lt;String&gt; insert(String code, String result)</Member>
+        <Member type="Method">public void LNRoutputTraversal(TreeNode&lt;String&gt; root, ArrayList&lt;String&gt; list)</Member>
+        <Member type="Method">public void setRoot(TreeNode&lt;String&gt; newNode)</Member>
+        <Member type="Method">public MorseCodeTree&lt;String&gt; update()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; toArrayList()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>MorseCodeConverter_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="230" top="59" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testConvertToEnglishString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MorseCodeConverter</Name>
+        <Access>Public</Access>
+        <Location left="1060" top="59" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String text</Member>
+        <Member type="Field">File selectedFile</Member>
+        <Member type="Method">public static String convertToEnglish(String text)</Member>
+        <Member type="Method">public static String convertToEnglish(File selectedFile)</Member>
+        <Member type="Method">public static String printTree()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MorseCodeTree</Name>
+        <Access>Public</Access>
+        <Location left="22" top="514" />
+        <Size width="162" height="383" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">TreeNode&lt;String&gt; root</Member>
+        <Member type="Field">String code</Member>
+        <Member type="Field">String letter</Member>
+        <Member type="Field">String data</Member>
+        <Member type="Field">String result</Member>
+        <Member type="Field">ArrayList&lt;String&gt; list</Member>
+        <Member type="Field">TreeNode&lt;String&gt; newNode</Member>
+        <Member type="Method">public void addNode(TreeNode&lt;String&gt; root, String code, String letter)</Member>
+        <Member type="Method">public void buildTree()</Member>
+        <Member type="Method">public MorseCodeTree&lt;String&gt; delete(String data)</Member>
+        <Member type="Method">public String fetch(String code)</Member>
+        <Member type="Method">public String fetchNode(TreeNode&lt;String&gt; root, String code)</Member>
+        <Member type="Method">public TreeNode&lt;String&gt; getRoot()</Member>
+        <Member type="Method">public MorseCodeTree&lt;String&gt; insert(String code, String result)</Member>
+        <Member type="Method">public void LNRoutputTraversal(TreeNode&lt;String&gt; root, ArrayList&lt;String&gt; list)</Member>
+        <Member type="Method">public void setRoot(TreeNode&lt;String&gt; newNode)</Member>
+        <Member type="Method">public MorseCodeTree&lt;String&gt; update()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; toArrayList()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TreeNode</Name>
+        <Access>Public</Access>
+        <Location left="861" top="59" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private T dataNode</Member>
+        <Member type="Field">TreeNode&lt;T&gt; node</Member>
+        <Member type="Constructor">public TreeNode(T dataNode)</Member>
+        <Member type="Constructor">public TreeNode(TreeNode&lt;T&gt; node)</Member>
+        <Member type="Method">public T getData()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MorseCodeConverterTest</Name>
+        <Access>Public</Access>
+        <Location left="230" top="311" />
+        <Size width="162" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">File inputFile</Member>
+        <Member type="Field">String correctResult</Member>
+        <Member type="Field">String s</Member>
+        <Member type="Field">String converter1</Member>
+        <Member type="Field">String test2</Member>
+        <Member type="Field">String converter2</Member>
+        <Member type="Field">String test1</Member>
+        <Member type="Field">JFileChooser chooser</Member>
+        <Member type="Field">int status</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testPrintTree()</Member>
+        <Member type="Method">public void testConvertToEnglishString()</Member>
+        <Member type="Method">public void testConvertToEnglishFile()</Member>
+        <Member type="Method">public void getFile(String in)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MorseCodeDriverFX</Name>
+        <Access>Public</Access>
+        <Location left="672" top="328" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">MorseCodeMain mainPane</Member>
+        <Member type="Field">Scene scene</Member>
+        <Member type="Method">public static void main(String[] args)</Member>
+        <Member type="Method">public void start(Stage stage)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MorseCodeMain</Name>
+        <Access>Public</Access>
+        <Location left="441" top="311" />
+        <Size width="162" height="434" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Label lblCode</Member>
+        <Member type="Field">private Label lblEnglish</Member>
+        <Member type="Field">private TextArea txtCode</Member>
+        <Member type="Field">private TextArea txtEnglish</Member>
+        <Member type="Field">private ScrollPane codeScroll</Member>
+        <Member type="Field">private ScrollPane englishScroll</Member>
+        <Member type="Field">private Button convertFile</Member>
+        <Member type="Field">private Button convertString</Member>
+        <Member type="Field">private Button exitButton</Member>
+        <Member type="Field">private Alert alert</Member>
+        <Member type="Field">VBox subpanel</Member>
+        <Member type="Field">String returnString</Member>
+        <Member type="Field">Scanner scan</Member>
+        <Member type="Field">File inputFile</Member>
+        <Member type="Field">FileChooser chooser</Member>
+        <Member type="Field">String originalString</Member>
+        <Member type="Field">File selectedFile</Member>
+        <Member type="Field">private int newField</Member>
+        <Member type="Constructor">public MorseCodeMain()</Member>
+        <Member type="Method">public String getFileContents(File inputFile)</Member>
+        <Member type="Method">public void readAndConvertFile()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BorderPane</Name>
+        <Access>Public</Access>
+        <Location left="441" top="21" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Application</Name>
+        <Access>Public</Access>
+        <Location left="672" top="19" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="8" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="9" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
