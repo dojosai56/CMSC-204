@@ -1,0 +1,301 @@
+<Project>
+  <Name>Assignment 6 </Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Graph Project</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Interface">
+        <Name>TownGraphManagerInterface</Name>
+        <Access>Public</Access>
+        <Location left="248" top="35" />
+        <Size width="162" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public boolean addRoad(String town1, String town2, int weight, String roadName)</Member>
+        <Member type="Method">public String getRoad(String town1, String town2)</Member>
+        <Member type="Method">public boolean addTown(String v)</Member>
+        <Member type="Method">public Town getTown(String name)</Member>
+        <Member type="Method">public boolean containsTown(String v)</Member>
+        <Member type="Method">public boolean containsRoadConnection(String town1, String town2)</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; allRoads()</Member>
+        <Member type="Method">public boolean deleteRoadConnection(String town1, String town2, String road)</Member>
+        <Member type="Method">public boolean deleteTown(String v)</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; allTowns()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; getPath(String town1, String town2)</Member>
+      </Entity>
+      <Entity type="Interface">
+        <Name>GraphInterface</Name>
+        <Access>Public</Access>
+        <Location left="45" top="12" />
+        <Size width="162" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public E getEdge(V sourceVertex, V destinationVertex)</Member>
+        <Member type="Method">public E addEdge(V sourceVertex, V destinationVertex, int weight, String description)</Member>
+        <Member type="Method">public boolean addVertex(V v)</Member>
+        <Member type="Method">public boolean containsEdge(V sourceVertex, V destinationVertex)</Member>
+        <Member type="Method">public boolean containsVertex(V v)</Member>
+        <Member type="Method">public Set&lt;E&gt; edgeSet()</Member>
+        <Member type="Method">public Set&lt;E&gt; edgesOf(V vertex)</Member>
+        <Member type="Method">public E removeEdge(V sourceVertex, V destinationVertex, int weight, String description)</Member>
+        <Member type="Method">public boolean removeVertex(V v)</Member>
+        <Member type="Method">public Set&lt;V&gt; vertexSet()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; shortestPath(V sourceVertex, V destinationVertex)</Member>
+        <Member type="Method">public void dijkstraShortestPath(V sourceVertex)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>FXMainPane</Name>
+        <Access>Public</Access>
+        <Location left="463" top="422" />
+        <Size width="162" height="825" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Label addTownLabel</Member>
+        <Member type="Field">Label townNameLabel</Member>
+        <Member type="Field">Label addRoadLabel</Member>
+        <Member type="Field">Label roadNameLabel</Member>
+        <Member type="Field">Label selectTownsForRoadLabel</Member>
+        <Member type="Field">Label findConnectionLabel</Member>
+        <Member type="Field">Label findConnectionFromLabel</Member>
+        <Member type="Field">Label toLabel</Member>
+        <Member type="Field">Label distLabel</Member>
+        <Member type="Field">VBox addTownVBox</Member>
+        <Member type="Field">VBox addRoadVBox</Member>
+        <Member type="Field">VBox findConnectionVBox</Member>
+        <Member type="Field">VBox bottomVBox</Member>
+        <Member type="Field">HBox addTownHBox</Member>
+        <Member type="Field">HBox addRoadNameHBox</Member>
+        <Member type="Field">HBox addRoadHBox</Member>
+        <Member type="Field">HBox addRoadTownsHBox</Member>
+        <Member type="Field">HBox findConnectionHBox</Member>
+        <Member type="Field">HBox bottomHBox</Member>
+        <Member type="Field">Button addTownButton</Member>
+        <Member type="Field">Button addRoadButton</Member>
+        <Member type="Field">Button findConnectionButton</Member>
+        <Member type="Field">Button readFileButton</Member>
+        <Member type="Field">Button exitButton</Member>
+        <Member type="Field">Button displayTownsButton</Member>
+        <Member type="Field">Button displayRoadsButton</Member>
+        <Member type="Field">TextField addTownTextField</Member>
+        <Member type="Field">TextField addRoadTextField</Member>
+        <Member type="Field">TextField specifyDistanceTextField</Member>
+        <Member type="Field">TextArea findConnectionTextArea</Member>
+        <Member type="Field">TextArea displayTowns</Member>
+        <Member type="Field">TextArea displayRoads</Member>
+        <Member type="Field">ComboBox&lt;String&gt; addSourceTownComboBox</Member>
+        <Member type="Field">ComboBox &lt;String&gt; addDestTownComboBox</Member>
+        <Member type="Field">ComboBox &lt;String&gt; sourceConnectionComboBox</Member>
+        <Member type="Field">ComboBox&lt;String&gt; destConnectionComboBox</Member>
+        <Member type="Field">Insets inset</Member>
+        <Member type="Field">Insets inset2</Member>
+        <Member type="Field">Insets inset3</Member>
+        <Member type="Field">TownGraphManager graph</Member>
+        <Member type="Field">Alert alert</Member>
+        <Member type="Constructor">public FXMainPane()</Member>
+        <Member type="Method">public void updateComboBoxes()</Member>
+        <Member type="Method">public void readFile()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GraphTest</Name>
+        <Access>Public</Access>
+        <Location left="1088" top="450" />
+        <Size width="162" height="349" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">GraphInterface&lt;Town,Road&gt; graph</Member>
+        <Member type="Field">Town[] town</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testGetEdge()</Member>
+        <Member type="Method">public void testAddEdge()</Member>
+        <Member type="Method">public void testAddVertex()</Member>
+        <Member type="Method">public void testContainsEdge()</Member>
+        <Member type="Method">public void testContainsVertex()</Member>
+        <Member type="Method">public void testEdgeSet()</Member>
+        <Member type="Method">public void testRemoveEdge()</Member>
+        <Member type="Method">public void testRemoveVertex()</Member>
+        <Member type="Method">public void testVertexSet()</Member>
+        <Member type="Method">public void testTown_1ToTown_11()</Member>
+        <Member type="Method">public void testTown1ToTown_10()</Member>
+        <Member type="Method">public void testTown_4ToTown_11()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TownGraphManagerTest</Name>
+        <Access>Public</Access>
+        <Location left="887" top="450" />
+        <Size width="162" height="366" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private TownGraphManagerInterface graph</Member>
+        <Member type="Field">private String[] town</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddRoad()</Member>
+        <Member type="Method">public void testGetRoad()</Member>
+        <Member type="Method">public void testAddTown()</Member>
+        <Member type="Method">public void testDisjointGraph()</Member>
+        <Member type="Method">public void testContainsTown()</Member>
+        <Member type="Method">public void testContainsRoadConnection()</Member>
+        <Member type="Method">public void testAllRoads()</Member>
+        <Member type="Method">public void testDeleteRoadConnection()</Member>
+        <Member type="Method">public void testDeleteTown()</Member>
+        <Member type="Method">public void testAllTowns()</Member>
+        <Member type="Method">public void testGetPath()</Member>
+        <Member type="Method">public void testGetPathA()</Member>
+        <Member type="Method">public void testGetPathB()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DriverFX</Name>
+        <Access>Public</Access>
+        <Location left="673" top="436" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public static void main(String[] args)</Member>
+        <Member type="Method">public void start(Stage stage)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Application</Name>
+        <Access>Public</Access>
+        <Location left="674" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>VBox</Name>
+        <Access>Public</Access>
+        <Location left="464" top="18" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Graph_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="887" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Town[] town</Member>
+        <Member type="Field">GraphInterface&lt;Town,Road&gt; graph</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testGetEdge()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TownGraphManager_GFA_Test</Name>
+        <Access>Public</Access>
+        <Location left="1088" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private TownGraphManagerInterface graph</Member>
+        <Member type="Field">private String[] town</Member>
+        <Member type="Method">public void setUp()</Member>
+        <Member type="Method">public void tearDown()</Member>
+        <Member type="Method">public void testAddRoad()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Graph</Name>
+        <Access>Public</Access>
+        <Location left="45" top="380" />
+        <Size width="162" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public Road getEdge(Town sourceVertex, Town destinationVertex)</Member>
+        <Member type="Method">public Road addEdge(Town sourceVertex, Town destinationVertex, int weight, String description)</Member>
+        <Member type="Method">public boolean addVertex(Town v)</Member>
+        <Member type="Method">public boolean containsEdge(Town sourceVertex, Town destinationVertex)</Member>
+        <Member type="Method">public boolean containsVertex(Town v)</Member>
+        <Member type="Method">public Set&lt;Road&gt; edgeSet()</Member>
+        <Member type="Method">public Set&lt;Road&gt; edgesOf(Town vertex)</Member>
+        <Member type="Method">public Road removeEdge(Town sourceVertex, Town destinationVertex, int weight, String description)</Member>
+        <Member type="Method">public boolean removeVertex(Town v)</Member>
+        <Member type="Method">public Set&lt;Town&gt; vertexSet()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; shortestPath(Town sourceVertex, Town destinationVertex)</Member>
+        <Member type="Method">public void dijkstraShortestPath(Town sourceVertex)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TownGraphManager</Name>
+        <Access>Public</Access>
+        <Location left="248" top="380" />
+        <Size width="162" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public ArrayList&lt;String&gt; allTowns()</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; allRoads()</Member>
+        <Member type="Method">public Town getTown(String string)</Member>
+        <Member type="Method">public void addRoad(Object name, Object name2, int weight, String name3)</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; getPath(Object name, Object name2)</Member>
+        <Member type="Method">public boolean addTown(String townName)</Member>
+        <Member type="Method">public void populateTownGraph(File selectedFile)</Member>
+        <Member type="Method">public boolean addRoad(String town1, String town2, int weight, String roadName)</Member>
+        <Member type="Method">public String getRoad(String town1, String town2)</Member>
+        <Member type="Method">public boolean containsRoadConnection(String town1, String town2)</Member>
+        <Member type="Method">public boolean deleteRoadConnection(String town1, String town2, String road)</Member>
+        <Member type="Method">public boolean deleteTown(String v)</Member>
+        <Member type="Method">public ArrayList&lt;String&gt; getPath(String town1, String town2)</Member>
+        <Member type="Method">public boolean containsTown(String v)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Town</Name>
+        <Access>Public</Access>
+        <Location left="1299" top="16" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Town(String name)</Member>
+        <Member type="Constructor">public Town(Town templateTown)</Member>
+        <Member type="Method">public boolean equals(Object obj)</Member>
+        <Member type="Method">public boolean equals(Object obj)</Member>
+        <Member type="Method">public int hashCode()</Member>
+        <Member type="Method">public int compareTo(Town object)</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Road</Name>
+        <Access>Public</Access>
+        <Location left="1299" top="267" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Road(Town town, Town destination, int degrees, String name)</Member>
+        <Member type="Constructor">public Road(Town town, Town destination, String name)</Member>
+        <Member type="Method">public int compareTo(Road object)</Member>
+        <Member type="Method">public boolean contains(Town town)</Member>
+        <Member type="Method">public boolean equals(Object road)</Member>
+        <Member type="Method">public Town getDestination()</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public Town getSource()</Member>
+        <Member type="Method">public int getWeight()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="6" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="7" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="1" second="10">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="11">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

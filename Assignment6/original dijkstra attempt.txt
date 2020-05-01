@@ -1,0 +1,46 @@
+Map <Town, Boolean> visitedTowns;  
+		final int INFINITY = -1;
+		Tuple currentVertex;
+		int newdistance;
+		PriorityQueue <Tuple> queue = new PriorityQueue<Tuple>();
+		Set <Road> adjTowns;
+		distances = new HashMap <Town, Integer>();
+		visitedTowns = new HashMap <Town, Boolean>();
+		
+		for(Town town: towns)
+		{
+			visitedTowns.put(town, false);
+			distances.put(town, INFINITY);
+		}
+		distances.put(sourceVertex, 0);
+		queue.add(new Tuple(sourceVertex, 0));
+		
+		while(!(queue.isEmpty()))
+		{
+			currentVertex = queue.poll();
+			visitedTowns.replace(currentVertex.vertex, true);
+			System.out.println(currentVertex.vertex + "," + currentVertex.distanceValue);
+			adjTowns = edgesOf(currentVertex.vertex);
+			System.out.println(adjTowns);
+			for(Road road: adjTowns)
+			{
+				if(visitedTowns.get(road.getDestination()) == true)
+				{
+					continue;
+				}
+				
+				newdistance = distances.get(currentVertex.vertex) + road.getWeight();
+				
+				System.out.println(newdistance);
+				
+				if(newdistance < distances.get(road.getDestination()) || distances.get(road.getDestination()) == INFINITY)
+				{
+					distances.replace(road.getDestination(), newdistance);
+					queue.add(new Tuple(road.getDestination(), newdistance));
+					System.out.println(newdistance);
+				}
+			}
+		}
+		System.out.println(distances);
+		
+		
